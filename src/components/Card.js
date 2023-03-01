@@ -16,10 +16,8 @@ const Card = ({ card }) => {
       <Link to={`/${card.id}`}>
         <h1>Recipe:{card.name}</h1>
       </Link>
-      <img src={card.img} className="recipe-image" />
+      <img src={card.img} className="recipe-image" alt="" />
       <p>Cuisine: {card.cuisine}</p>
-      <p>Ingredients: {card.ingredients}</p>
-      <p>Directions: {card.directions}</p>
       <p>Prep Time(Mins) {card.time}</p>
     </div>
   )
