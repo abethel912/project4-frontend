@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData, Form } from 'react-router-dom'
 
 // destructuring the props needed to get our post, including router prop match
 const Show = () => {
@@ -17,11 +17,28 @@ const Show = () => {
   return (
     <div style={div}>
       <h1>{card.name}</h1>
-      <img src={card.img} className="recipe-image" alt="" />
       <h2>{card.cuisine}</h2>
-      <p>Ingredients: {card.ingredients}</p>
-      <p>Directions: {card.directions}</p>
-      <p>Prep Time(Mins): {card.time}</p>
+      <div style={{ textAlign: 'center' }}>
+        <h2>Create a Recipe</h2>
+        <Form action={`/create/${card.id}`} method="post">
+          <input
+            type="text"
+            name="name"
+            placeholder="recipe"
+            defaultValue={card.name}
+          />
+          <input
+            type="text"
+            name="cuisine"
+            placeholder="cuisine"
+            defaultValue={card.cuisine}
+          />
+          <button>Update Recipe</button>
+        </Form>
+        <Form action={`/delete/${card.id}`} method="post">
+          <button>Delete Recipe</button>
+        </Form>
+      </div>
       <Link to="/">
         <button>Go Back</button>
       </Link>
