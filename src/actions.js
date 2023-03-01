@@ -46,7 +46,7 @@ export const updateAction = async ({ request, params }) => {
     cuisine: formData.get('cuisine'),
     ingredients: formData.get('ingredients'),
     directions: formData.get('directions'),
-    time: formData.get('time'),
+    time: formData.get('time')
   }
 
   // send request to backend

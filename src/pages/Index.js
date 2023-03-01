@@ -13,9 +13,24 @@ const Index = (props) => {
           <input type="text" name="name" placeholder="recipe" />
           <input type="text" name="img" placeholder="URL here" />
           <input type="text" alt="" name="cuisine" placeholder="cuisine" />
-          <input type="text" alt="" name="ingredients" placeholder="ingredients" />
-          <input type="text" alt="" name="directions" placeholder="directions" />
-          <input type="text" alt="" name="time" placeholder="prep time (mins)" />
+          <input
+            type="text"
+            alt=""
+            name="ingredients"
+            placeholder="ingredients"
+          />
+          <input
+            type="text"
+            alt=""
+            name="directions"
+            placeholder="directions"
+          />
+          <input
+            type="text"
+            alt=""
+            name="time"
+            placeholder="prep time (mins)"
+          />
           <button>Create New Recipe</button>
         </Form>
       </div>

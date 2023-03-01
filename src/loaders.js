@@ -1,6 +1,5 @@
 const URL = 'https://newproject4-backend.onrender.com'
 
-//indexLoader => get all todos for index route
 export const indexLoader = async () => {
   const response = await fetch(URL + '/recipes/')
   const recipes = await response.json()

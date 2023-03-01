@@ -29,9 +29,33 @@ const Show = () => {
           />
           <input
             type="text"
+            name="image"
+            placeholder="image URL"
+            defaultValue={card.img}
+          />
+          <input
+            type="text"
             name="cuisine"
             placeholder="cuisine"
             defaultValue={card.cuisine}
+          />
+          <input
+            type="text"
+            name="ingredients"
+            placeholder="ingredients"
+            defaultValue={card.ingredients}
+          />
+          <input
+            type="text"
+            name="directions"
+            placeholder="directions"
+            defaultValue={card.directions}
+          />
+          <input
+            type="text"
+            name="time"
+            placeholder="time"
+            defaultValue={card.time}
           />
           <button>Update Recipe</button>
         </Form>
