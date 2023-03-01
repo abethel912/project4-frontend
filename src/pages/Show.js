@@ -19,8 +19,7 @@ const Show = () => {
       <h1>{card.name}</h1>
       <h2>{card.cuisine}</h2>
       <div style={{ textAlign: 'center' }}>
-        <h2>Create a Recipe</h2>
-        <Form action={`/create/${card.id}`} method="post">
+        <Form action={`/update/${card.id}`} method="post">
           <input
             type="text"
             name="name"
@@ -29,7 +28,7 @@ const Show = () => {
           />
           <input
             type="text"
-            name="image"
+            name="img"
             placeholder="image URL"
             defaultValue={card.img}
           />
@@ -61,6 +60,7 @@ const Show = () => {
         </Form>
         <Form action={`/delete/${card.id}`} method="post">
           <button>Delete Recipe</button>
+          
         </Form>
       </div>
       <Link to="/">
